@@ -1,5 +1,4 @@
-"use client"
-
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import { 
@@ -101,7 +100,7 @@ const HighlightBox = ({ title, children, type = "neutral" }) => {
     accent: "bg-[#F4F1EA] border-[#D6CEC0] text-stone-800", // Warm beige
     alert: "bg-amber-50 border-amber-200 text-amber-900",
   };
-  
+   
   return (
     <div className={`p-5 rounded-lg border ${styles[type]} my-4`}>
       {title && <h4 className="font-bold text-sm uppercase tracking-wider mb-2 opacity-80">{title}</h4>}
@@ -277,17 +276,17 @@ const FeatureTabs = () => {
                   <div className="col-span-4">Benefit (Control & Privacy)</div>
                   <div className="col-span-5">Cost (Burden & Risk Transfer)</div>
                 </div>
-               {[
-                 { aspect: 'Data Flow', ben: 'Reduces Protected Health Information egress and supports data-minimization strategies.', cost: 'Hospital assumes responsibility for all data-in-transit and data-at-rest security.' },
-                 { aspect: 'Software', ben: 'Full control over model version, patching, and dependencies (version pinning).', cost: 'Hospital is responsible for vulnerability patching, system maintenance, and dependency management.' },
-                 { aspect: 'Oversight', ben: 'Enables granular, internal access governance and audit controls.', cost: 'Hospital assumes responsibility for security posture, monitoring, and incident response.' }
-               ].map((row) => (
-                 <div key={row.aspect} className="p-3 grid grid-cols-12 gap-4 text-sm">
-                   <div className="col-span-3 font-bold text-stone-800">{row.aspect}</div>
-                   <div className="col-span-4 text-stone-600">{row.ben}</div>
-                   <div className="col-span-5 text-amber-800/80 bg-amber-50/50 p-1 rounded">{row.cost}</div>
-                 </div>
-               ))}
+             {[
+               { aspect: 'Data Flow', ben: 'Reduces Protected Health Information egress and supports data-minimization strategies.', cost: 'Hospital assumes responsibility for all data-in-transit and data-at-rest security.' },
+               { aspect: 'Software', ben: 'Full control over model version, patching, and dependencies (version pinning).', cost: 'Hospital is responsible for vulnerability patching, system maintenance, and dependency management.' },
+               { aspect: 'Oversight', ben: 'Enables granular, internal access governance and audit controls.', cost: 'Hospital assumes responsibility for security posture, monitoring, and incident response.' }
+             ].map((row) => (
+               <div key={row.aspect} className="p-3 grid grid-cols-12 gap-4 text-sm">
+                 <div className="col-span-3 font-bold text-stone-800">{row.aspect}</div>
+                 <div className="col-span-4 text-stone-600">{row.ben}</div>
+                 <div className="col-span-5 text-amber-800/80 bg-amber-50/50 p-1 rounded">{row.cost}</div>
+               </div>
+             ))}
              </div>
           </div>
 
@@ -445,7 +444,7 @@ export default function MistralProposal() {
 
   return (
     <div className="min-h-screen bg-[#FDFCF8] text-[#333333] font-sans selection:bg-stone-200">
-      
+       
       {/* Navigation - Desktop */}
       <nav className="hidden lg:block fixed left-0 top-0 h-screen w-72 border-r border-stone-200 bg-[#FDFCF8] p-8 overflow-y-auto z-50">
         <div className="mb-10">
